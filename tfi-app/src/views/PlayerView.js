@@ -1,9 +1,8 @@
 import React from "react";
 import Elementos from "./ElementosView";
+import './Game.css';
 
-export default function PlayerView({ nroPlayer }) {
-    var contador = 0;
-
+export default function PlayerView({ nroPlayer, contador }) {
     return (
         <div className="Player">
             <table className="TablePlayer">
@@ -18,7 +17,7 @@ export default function PlayerView({ nroPlayer }) {
                     </tr>
                 </tbody>
             </table>
-            <Elementos />
+            <Elementos nroPlayer={nroPlayer}/>
         </div>
     )
 }

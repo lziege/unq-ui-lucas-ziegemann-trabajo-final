@@ -4,11 +4,18 @@ import { useNavigate } from "react-router-dom";
 export default function HomeView() {
     const navigate = useNavigate()
     const goTo1PvsIA = () => {
-        navigate(`/1PvsIA`)
+        window.localStorage.setItem("contador P1", 0);
+        window.localStorage.setItem("contador IA", 0);
+        window.localStorage.removeItem("eleccion P1");
+        navigate(`/1PvsIA`);
     }
 
     const goTo1Pvs2P = () => {
-        navigate(`/1Pvs2P`)
+        window.localStorage.setItem("contador P1", 0);
+        window.localStorage.setItem("contador P2", 0);
+        window.localStorage.removeItem("eleccion P1");
+        window.localStorage.removeItem("eleccion P2");
+        navigate(`/1Pvs2P`);
     }
 
     return (

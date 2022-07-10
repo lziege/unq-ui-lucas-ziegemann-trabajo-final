@@ -39,3 +39,8 @@ tbody td {
 .Elemento:active {
     transform: translateY(4px);
 }
+
+.Eleccion {
+    border-radius: 5rem;
+    margin: 0.5em;
+}
