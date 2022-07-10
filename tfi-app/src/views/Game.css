@@ -1,0 +1,41 @@
+.Game {
+    color: rgb(6, 224, 224);
+    text-align: center;
+    display: flex;
+}
+
+.Player {
+    float: left;
+}
+
+.TablePlayer {
+    height: 100px;
+    width: 15rem;
+    margin: 1rem auto;
+    border-collapse: collapse;
+    border: 5px solid rgb(94, 83, 241);
+}
+
+thead th,
+tbody td {
+    border: 5px solid rgb(94, 83, 241);
+}
+
+.Elementos {
+    align-items: center;
+    float: left;
+}
+
+.Elemento {
+    margin: 0.5em;
+    cursor: pointer;
+    border-radius: 5rem;
+}
+
+.Elemento:hover {
+    transform: scale(1.1);
+}
+
+.Elemento:active {
+    transform: translateY(4px);
+}
