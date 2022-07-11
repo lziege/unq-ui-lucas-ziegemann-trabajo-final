@@ -17,6 +17,14 @@ export default function Player1VsIAFinalizada() {
         navigate(`/1PvsIA`);
     }
 
+    function elGanador() {
+        if (eleccionGanadora === eleccionPlayer) {
+            return <h3>El ganador es el player 1</h3>
+        } else if (eleccionGanadora === eleccionIA) {
+            return <h3>El ganador es la IA</h3>
+        }
+    }
+
     return (
         <div>
             <div className="Game">
@@ -29,10 +37,11 @@ export default function Player1VsIAFinalizada() {
                     <img className="Eleccion" src={eleccionIA} alt="Eleccion IA" />
                 </div>
             </div>
-            <div className="Empate">
-                {eleccionGanadora ? <img className="Eleccion" src={eleccionGanadora} alt="Eleccion ganadora" /> : <h3>EMPATE</h3> }
+            <div>
+                {elGanador()}
+                {eleccionGanadora ? <img className="EleccionGanadora" src={eleccionGanadora} alt="Eleccion ganadora" /> : <h3>EMPATE</h3> }
             </div>
-            <button type="button" onClick={goTo1PvsIA}>Volver a jugar</button>
+            <button type="button" className="Button" onClick={goTo1PvsIA}>Volver a jugar</button>
         </div>
     )
 }

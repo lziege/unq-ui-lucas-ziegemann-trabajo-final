@@ -51,15 +51,15 @@ export default function Player1VsPlayer2() {
     }
 
     return (
-        <div className="PlayerVsPlayer">
+        <div>
             <div className="Game">
                 <Player nroPlayer={1} />
                 <Player nroPlayer={2} />
             </div>
             <div>
-                {eleccionP1 && eleccionP2 ? <button type="button" onClick={goTo1Pvs2PFinalizada}>Jugar partida</button> : null}
+                {eleccionP1 && eleccionP2 ? <button type="button" className="Button" onClick={goTo1Pvs2PFinalizada}>Jugar partida</button> : null}
             </div>
-            <button type="button" onClick={reiniciarContadores}>Reiniciar contadores</button>
+            <button type="button" className="Button" onClick={reiniciarContadores}>Reiniciar contadores</button>
         </div>
     )
 }

@@ -16,6 +16,14 @@ export default function Player1VsPlayer2Finalizada() {
         navigate(`/1Pvs2P`);
     }
 
+    function elGanador() {
+        if (eleccionGanadora === eleccionP1) {
+            return <h3>El ganador es el player 1</h3>
+        } else if (eleccionGanadora === eleccionP2) {
+            return <h3>El ganador es el player 2</h3>
+        }
+    }
+
     return (
         <div>
             <div className="Game">
@@ -28,10 +36,11 @@ export default function Player1VsPlayer2Finalizada() {
                     <img className="Eleccion" src={eleccionP2} alt="Eleccion P2" />
                 </div>
             </div>
-            <div className="Empate">
-                {eleccionGanadora ? <img className="Eleccion" src={eleccionGanadora} alt="Eleccion ganadora" /> : <h3>EMPATE</h3>}
+            <div>
+                {elGanador()}
+                {eleccionGanadora ? <img className="EleccionGanadora" src={eleccionGanadora} alt="Eleccion ganadora" /> : <h3>EMPATE</h3>}
             </div>
-            <button type="button" onClick={goTo1PvsP2}>Volver a jugar</button>
+            <button type="button" className="Button" onClick={goTo1PvsP2}>Volver a jugar</button>
         </div>
     )
 }

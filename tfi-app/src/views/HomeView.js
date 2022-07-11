@@ -24,10 +24,10 @@ export default function HomeView() {
     return (
         <div>
             <div>
-                <button type="button" onClick={goTo1PvsIA}>1P VS IA</button>
+                <button type="button" className="Button" onClick={goTo1PvsIA}>1P VS IA</button>
             </div>
             <div>
-                <button type="button" onClick={goTo1Pvs2P}>1P VS 2P</button>
+                <button type="button" className="Button" onClick={goTo1Pvs2P}>1P VS 2P</button>
             </div>
         </div>
     )

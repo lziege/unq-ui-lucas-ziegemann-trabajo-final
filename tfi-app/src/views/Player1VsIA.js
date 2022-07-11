@@ -57,7 +57,7 @@ export default function Player1VsIA() {
     }
 
     return (
-        <div className="PlayerVsCPU">
+        <div>
             <div className="Game">
                 <div>
                     <Player nroPlayer={1} />
@@ -65,9 +65,9 @@ export default function Player1VsIA() {
                 </div>
             </div>
             <div>
-                {eleccionPlayer ? <button type="button" onClick={goTo1PvsIAFinalizada}>Jugar partida</button> : null}
+                {eleccionPlayer ? <button type="button" className="Button" onClick={goTo1PvsIAFinalizada}>Jugar partida</button> : null}
             </div>
-            <button type="button" onClick={reiniciarContadores}>Reiniciar contadores</button>
+            <button type="button" className="Button" onClick={reiniciarContadores}>Reiniciar contadores</button>
         </div>
     )
 }

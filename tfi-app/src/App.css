@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  color: rgb(6, 224, 224);
 }
 
 .App-logo {
@@ -21,14 +22,12 @@
 }
 
 .App-header {
-  background-color: #1b4715;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
