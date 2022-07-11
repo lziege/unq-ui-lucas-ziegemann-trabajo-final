@@ -7,6 +7,8 @@ export default function HomeView() {
         window.localStorage.setItem("contador P1", 0);
         window.localStorage.setItem("contador IA", 0);
         window.localStorage.removeItem("eleccion P1");
+        window.localStorage.removeItem("eleccion IA");
+        window.localStorage.removeItem("eleccion ganadora");
         navigate(`/1PvsIA`);
     }
 
@@ -15,6 +17,7 @@ export default function HomeView() {
         window.localStorage.setItem("contador P2", 0);
         window.localStorage.removeItem("eleccion P1");
         window.localStorage.removeItem("eleccion P2");
+        window.localStorage.removeItem("eleccion ganadora");
         navigate(`/1Pvs2P`);
     }
 

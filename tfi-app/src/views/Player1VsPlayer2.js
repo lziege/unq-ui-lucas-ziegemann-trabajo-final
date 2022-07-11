@@ -9,8 +9,8 @@ export default function Player1VsPlayer2() {
     return (
         <div>
             <div className="Game">
-                <Player nroPlayer={1} contador={window.localStorage.getItem("contador P1")} />
-                <Player nroPlayer={2} contador={window.localStorage.getItem("contador P2")} />
+                <Player nroPlayer={1} />
+                <Player nroPlayer={2} />
             </div>
             <div>
                 {eleccionP1 && eleccionP2 ? <img className="Eleccion" src={eleccionP1} alt="Eleccion P1" /> : null}
