@@ -1,20 +1,19 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import TablePlayer from "./TablePlayerView";
-import TableIA from "./TableIAView";
 import './Game.css';
 
-export default function Player1VsIAFinalizada() {
-    let eleccionPlayer = window.localStorage.getItem("eleccion P1");
-    let eleccionIA = window.localStorage.getItem("eleccion IA");
+export default function Player1VsPlayer2Finalizada() {
+    let eleccionP1 = window.localStorage.getItem("eleccion P1");
+    let eleccionP2 = window.localStorage.getItem("eleccion P2");
     let eleccionGanadora = window.localStorage.getItem("eleccion ganadora");
 
     const navigate = useNavigate()
-    const goTo1PvsIA = () => {
+    const goTo1PvsP2 = () => {
         window.localStorage.removeItem("eleccion P1");
-        window.localStorage.removeItem("eleccion IA");
+        window.localStorage.removeItem("eleccion P2");
         window.localStorage.removeItem("eleccion ganadora");
-        navigate(`/1PvsIA`);
+        navigate(`/1Pvs2P`);
     }
 
     return (
@@ -22,17 +21,17 @@ export default function Player1VsIAFinalizada() {
             <div className="Game">
                 <div className="TablaFinalizada">
                     <TablePlayer nroPlayer={1} contador={window.localStorage.getItem("contador P1")} />
-                    <img className="Eleccion" src={eleccionPlayer} alt="Eleccion P1" />
+                    <img className="Eleccion" src={eleccionP1} alt="Eleccion P1" />
                 </div>
                 <div className="TablaFinalizada">
-                    <TableIA />
-                    <img className="Eleccion" src={eleccionIA} alt="Eleccion IA" />
+                    <TablePlayer nroPlayer={2} contador={window.localStorage.getItem("contador P2")} />
+                    <img className="Eleccion" src={eleccionP2} alt="Eleccion P2" />
                 </div>
             </div>
             <div className="Empate">
-                {eleccionGanadora ? <img className="Eleccion" src={eleccionGanadora} alt="Eleccion ganadora" /> : <h3>EMPATE</h3> }
+                {eleccionGanadora ? <img className="Eleccion" src={eleccionGanadora} alt="Eleccion ganadora" /> : <h3>EMPATE</h3>}
             </div>
-            <button type="button" onClick={goTo1PvsIA}>Volver a jugar</button>
+            <button type="button" onClick={goTo1PvsP2}>Volver a jugar</button>
         </div>
     )
 }
