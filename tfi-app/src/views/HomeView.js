@@ -21,6 +21,10 @@ export default function HomeView() {
         navigate(`/1Pvs2P`);
     }
 
+    const goToReglas = () => {
+        navigate(`/ReglasDelJuego`);
+    }
+
     return (
         <div>
             <div>
@@ -28,6 +32,9 @@ export default function HomeView() {
             </div>
             <div>
                 <button type="button" className="Button" onClick={goTo1Pvs2P}>1P VS 2P</button>
+            </div>
+            <div>
+                <button type="button" className="Button" onClick={goToReglas}>REGLAS DEL JUEGO</button>
             </div>
         </div>
     )
