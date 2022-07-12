@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import TablePlayer from "../../tables/views/TablePlayerView";
-import TableIA from "../../tables/views/TableIAView";
+import TablePlayer from "../../tables/views/TableView";
 import '../Game.css';
 import '../Eleccion.css';
 import '../../tables/Tables.css';
@@ -31,11 +30,11 @@ export default function Player1VsIAFinalizada() {
         <div>
             <div className="Game">
                 <div className="TablaFinalizada">
-                    <TablePlayer nroPlayer={1} contador={window.localStorage.getItem("contador P1")} />
+                    <TablePlayer name={"Player 1"} contador={window.localStorage.getItem("contador P1")} />
                     <img className="Eleccion" src={eleccionPlayer} alt="Eleccion P1" />
                 </div>
                 <div className="TablaFinalizada">
-                    <TableIA />
+                    <TablePlayer name={"IA"} contador={window.localStorage.getItem("contador IA")} />
                     <img className="Eleccion" src={eleccionIA} alt="Eleccion IA" />
                 </div>
             </div>

@@ -2,6 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Player from "./PlayerView";
 import ModificadorDeContadores from "../components/ModificadorDeContadores";
+import Elementos from "../../elementos/views/ElementosView";
+import ElementosSeleccionables from "../../elementos/views/ElementosSeleccionablesView";
 import '../Game.css';
 
 export default function Player1VsPlayer2() {
@@ -20,8 +22,10 @@ export default function Player1VsPlayer2() {
     return (
         <div>
             <div className="Game">
-                <Player nroPlayer={1} />
-                <Player nroPlayer={2} />
+                {eleccionP1 ? <Player nroPlayer={1} elementosAMostrar={<Elementos />} /> 
+                            : <Player nroPlayer={1} elementosAMostrar={<ElementosSeleccionables nroPlayer={1} />} /> }
+                {eleccionP2 ? <Player nroPlayer={2} elementosAMostrar={<Elementos />} /> 
+                            : <Player nroPlayer={2} elementosAMostrar={<ElementosSeleccionables nroPlayer={2} />} /> }
             </div>
             <div>
                 {eleccionP1 && eleccionP2 ? <button type="button" className="Button" onClick={goTo1Pvs2PFinalizada}>Jugar partida</button> : null}

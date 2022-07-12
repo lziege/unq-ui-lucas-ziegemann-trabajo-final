@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import TablePlayer from "../../tables/views/TablePlayerView";
+import TablePlayer from "../../tables/views/TableView";
 import '../Game.css';
 import '../Eleccion.css';
 import '../../tables/Tables.css';
@@ -30,11 +30,11 @@ export default function Player1VsPlayer2Finalizada() {
         <div>
             <div className="Game">
                 <div className="TablaFinalizada">
-                    <TablePlayer nroPlayer={1} contador={window.localStorage.getItem("contador P1")} />
+                    <TablePlayer name={"Player 1"} contador={window.localStorage.getItem("contador P1")} />
                     <img className="Eleccion" src={eleccionP1} alt="Eleccion P1" />
                 </div>
                 <div className="TablaFinalizada">
-                    <TablePlayer nroPlayer={2} contador={window.localStorage.getItem("contador P2")} />
+                    <TablePlayer name={"Player 2"} contador={window.localStorage.getItem("contador P2")} />
                     <img className="Eleccion" src={eleccionP2} alt="Eleccion P2" />
                 </div>
             </div>

@@ -1,8 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Player from "./PlayerView";
-import TableIA from "../../tables/views/TableIAView";
+import TablePlayer from "../../tables/views/TableView";
 import ModificadorDeContadores from "../components/ModificadorDeContadores";
+import Elementos from "../../elementos/views/ElementosView";
+import ElementosSeleccionables from "../../elementos/views/ElementosSeleccionablesView";
 import Piedra from "../../assets/Piedra.png";
 import Tijera from "../../assets/Tijera.png";
 import Papel from "../../assets/Papel.png";
@@ -32,8 +34,9 @@ export default function Player1VsIA() {
         <div>
             <div className="Game">
                 <div>
-                    <Player nroPlayer={1} />
-                    <TableIA />
+                    {eleccionPlayer ? <Player nroPlayer={1} elementosAMostrar={<Elementos />} /> 
+                                    : <Player nroPlayer={1} elementosAMostrar={<ElementosSeleccionables nroPlayer={1} />} /> }
+                    <TablePlayer name={"IA"} contador={window.localStorage.getItem("contador IA")} />
                 </div>
             </div>
             <div>

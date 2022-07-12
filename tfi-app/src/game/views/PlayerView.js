@@ -1,13 +1,12 @@
 import React from "react";
-import Elementos from "../../elementos/views/ElementosView";
-import TablePlayer from "../../tables/views/TablePlayerView";
+import TablePlayer from "../../tables/views/TableView";
 import '../Game.css';
 
-export default function PlayerView({ nroPlayer }) {
+export default function PlayerView({ nroPlayer, elementosAMostrar }) {
     return (
         <div className="Player">
-            <TablePlayer nroPlayer={nroPlayer} contador={window.localStorage.getItem("contador P" + nroPlayer)} />
-            <Elementos nroPlayer={nroPlayer} />
+            <TablePlayer name={"Player " + nroPlayer} contador={window.localStorage.getItem("contador P" + nroPlayer)} />
+            {elementosAMostrar}
         </div>
     )
 }
