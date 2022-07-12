@@ -2,6 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import TablePlayer from "./TablePlayerView";
 import './Game.css';
+import './Eleccion.css';
+import './Tables.css';
 
 export default function Player1VsPlayer2Finalizada() {
     let eleccionP1 = window.localStorage.getItem("eleccion P1");

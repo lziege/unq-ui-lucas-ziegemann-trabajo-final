@@ -1,5 +1,5 @@
 import React from "react";
-import './Game.css';
+import './Tables.css';
 
 export default function TableIAView() {
     return (

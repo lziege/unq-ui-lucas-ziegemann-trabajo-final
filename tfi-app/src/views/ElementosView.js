@@ -4,7 +4,7 @@ import Tijera from "../assets/Tijera.png";
 import Papel from "../assets/Papel.png";
 import Spock from "../assets/Spock.png";
 import Lagarto from "../assets/Lagarto.png";
-import './Game.css';
+import './Elemento.css';
 
 export default function ElementosView({ nroPlayer }) {
 
