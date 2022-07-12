@@ -34,6 +34,7 @@ const reiniciarContadores = (tipoContador2) => {
     window.location.reload();
 }
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
     aumentarContadorSiCorresponde,
     reiniciarContadores,
