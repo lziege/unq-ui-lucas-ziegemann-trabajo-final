@@ -1,10 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import TablePlayer from "./TablePlayerView";
-import TableIA from "./TableIAView";
-import './Game.css';
-import './Eleccion.css';
-import './Tables.css';
+import TablePlayer from "../../tables/views/TablePlayerView";
+import TableIA from "../../tables/views/TableIAView";
+import '../Game.css';
+import '../Eleccion.css';
+import '../../tables/Tables.css';
 
 export default function Player1VsIAFinalizada() {
     let eleccionPlayer = window.localStorage.getItem("eleccion P1");

@@ -1,8 +1,8 @@
-import Piedra from "../assets/Piedra.png";
-import Tijera from "../assets/Tijera.png";
-import Papel from "../assets/Papel.png";
-import Spock from "../assets/Spock.png";
-import Lagarto from "../assets/Lagarto.png";
+import Piedra from "../../assets/Piedra.png";
+import Tijera from "../../assets/Tijera.png";
+import Papel from "../../assets/Papel.png";
+import Spock from "../../assets/Spock.png";
+import Lagarto from "../../assets/Lagarto.png";
 
 function leGana(eleccion1, eleccion2) {
     return ((eleccion1 === Tijera && (eleccion2 === Papel || eleccion2 === Lagarto))

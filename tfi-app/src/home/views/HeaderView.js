@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Titulo from "../assets/Titulo.png";
+import Titulo from "../../assets/Titulo.png";
 
 export default function HeaderView() {
     const navigate = useNavigate()

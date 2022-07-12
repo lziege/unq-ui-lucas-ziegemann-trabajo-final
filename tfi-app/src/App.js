@@ -1,12 +1,12 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomeView from "./views/HomeView";
-import Player1VsIA from "./views/Player1VsIA";
-import Player1VsIAFinalizada from "./views/Player1VsIAFinalizada";
-import Player1VsPlayer2 from "./views/Player1VsPlayer2";
-import Player1VsPlayer2Finalizada from "./views/Player1VsPlayer2Finalizada";
-import HeaderView from "./views/HeaderView";
-import ReglasView from "./views/ReglasView";
+import HomeView from "./home/views/HomeView";
+import Player1VsIA from "./game/views/Player1VsIA";
+import Player1VsIAFinalizada from "./game/views/Player1VsIAFinalizada";
+import Player1VsPlayer2 from "./game/views/Player1VsPlayer2";
+import Player1VsPlayer2Finalizada from "./game/views/Player1VsPlayer2Finalizada";
+import HeaderView from "./home/views/HeaderView";
+import ReglasView from "./reglas/views/ReglasView";
 
 const NoMatch = () => <div style={{ height: "100vh" }}>NoMatch</div>
 

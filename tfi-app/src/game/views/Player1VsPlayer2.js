@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Player from "./PlayerView";
-import ModificadorDeContadores from "./ModificadorDeContadores";
-import './Game.css';
+import ModificadorDeContadores from "../components/ModificadorDeContadores";
+import '../Game.css';
 
 export default function Player1VsPlayer2() {
     let eleccionP1 = window.localStorage.getItem("eleccion P1");

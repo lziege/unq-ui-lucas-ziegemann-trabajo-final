@@ -1,7 +1,7 @@
 import React from "react";
-import Elementos from "./ElementosView";
-import TablePlayer from "./TablePlayerView";
-import './Game.css';
+import Elementos from "../../elementos/views/ElementosView";
+import TablePlayer from "../../tables/views/TablePlayerView";
+import '../Game.css';
 
 export default function PlayerView({ nroPlayer }) {
     return (

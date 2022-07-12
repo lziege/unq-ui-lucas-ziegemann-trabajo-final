@@ -1,14 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Player from "./PlayerView";
-import TableIA from "./TableIAView";
-import ModificadorDeContadores from "./ModificadorDeContadores";
-import Piedra from "../assets/Piedra.png";
-import Tijera from "../assets/Tijera.png";
-import Papel from "../assets/Papel.png";
-import Spock from "../assets/Spock.png";
-import Lagarto from "../assets/Lagarto.png";
-import './Game.css';
+import TableIA from "../../tables/views/TableIAView";
+import ModificadorDeContadores from "../components/ModificadorDeContadores";
+import Piedra from "../../assets/Piedra.png";
+import Tijera from "../../assets/Tijera.png";
+import Papel from "../../assets/Papel.png";
+import Spock from "../../assets/Spock.png";
+import Lagarto from "../../assets/Lagarto.png";
+import '../Game.css';
 
 export default function Player1VsIA() {
     let eleccionPlayer = window.localStorage.getItem("eleccion P1");

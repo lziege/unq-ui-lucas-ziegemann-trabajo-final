@@ -1,10 +1,10 @@
 import React from "react";
-import Piedra from "../assets/Piedra.png";
-import Tijera from "../assets/Tijera.png";
-import Papel from "../assets/Papel.png";
-import Spock from "../assets/Spock.png";
-import Lagarto from "../assets/Lagarto.png";
-import './Elemento.css';
+import Piedra from "../../assets/Piedra.png";
+import Tijera from "../../assets/Tijera.png";
+import Papel from "../../assets/Papel.png";
+import Spock from "../../assets/Spock.png";
+import Lagarto from "../../assets/Lagarto.png";
+import '../Elemento.css';
 
 export default function ElementosView({ nroPlayer }) {
 
